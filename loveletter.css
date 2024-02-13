@@ -1,0 +1,200 @@
+body {
+    background-image: url(Background\ for\ letter.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.messageContainer {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two columns of equal width */
+    gap: 20px; /* Optional: adds space between the columns */
+}
+
+.containerOne, .containerTwo {
+    padding: 10px; 
+    background-color: #fff;
+    border-radius: 5px; 
+    text-align: center;
+}
+
+.containerOne p {
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerTwo p {
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerTwo .Yes, .No{
+    width: 75%;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px #008080;
+    margin: 5px auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.containerTwo .Yes:active, .No:active{
+    transform: translateY(2px);
+}
+
+.containerTwo .Yes {
+    padding: 10px;
+    background-color: #00FFFF;
+}
+
+.containerTwo .No {
+    padding: 10px;
+    background-color: #40E0E0;
+}
+
+.gifContainer {
+    width: 100%; /* or any specific width */
+    overflow: hidden; /* Ensures nothing spills out of the box */
+    position: relative; /* Sets up for absolute positioning of the child image */
+    padding-top: 56.25%; /* Example for 16:9 aspect ratio: (9 / 16) * 100% */
+}
+
+img.responsive {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: contain; /* Ensures the image fits without distortion */
+}
+
+
+img.responsive {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    display: block; /* Prevents inline default behavior */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+.tvFrame {
+    background-color: black;
+    border: 5px solid #333; /* Slightly lighter border for a bit of depth */
+    border-radius: 20px;
+    padding: 20px; /* Adjusted for a slimmer frame */
+    margin: 20px auto; /* Center the TV */
+    width: 70%; /* Adjust the width as needed */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Optional: add some shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tvDisplay {
+    border: 3px solid #555;
+    background-color: #fff; /* Make screen black */
+    color: #000;
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 2vw;
+    gap: 10px;
+    justify-content: center;
+    align-items: center; /* Center content vertically and horizontally */
+    padding: 120px; /* Add padding as needed */
+}
+
+#nextMessageButton {
+    padding: 8px 16px;
+    background-color: #444; /* Dark grey, typical for remote buttons */
+    color: #fff; /* White text for contrast */
+    border: none; /* TV remote buttons often have no visible border */
+    border-radius: 15px; /* More pronounced rounded corners */
+    font-family: 'Arial', sans-serif; /* Simple, clean font */
+    font-size: 14px; /* Compact text */
+    letter-spacing: 1px; /* Slightly spread out letters */
+    cursor: pointer;
+    box-shadow: 0 4px #333; /* Simulate the button being raised */
+    transition: all 0.2s ease;
+}
+
+#nextMessageButton:hover {
+    background-color: #4c4c4c; /* Slightly lighter on hover */
+}
+
+#nextMessageButton:active {
+    box-shadow: 0 2px #333; /* Adjust shadow to look like the button is being pressed */
+    transform: translateY(2px); /* Move the button down to simulate being pressed */
+}
+
+.preference {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.eatContainer {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+}
+
+.choices img {
+    width: 20%;
+    margin: auto 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#hide {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s;
+    height: auto; /* Adjust as needed */
+}
+
+.hidden {
+    display: none; /* Hide the element */
+}
+
+@media (max-width: 1500px) {
+    .messageContainer {
+        max-width: 500px;
+        grid-template-columns: 1fr; /* Stack the columns on smaller screens */
+    }
+    body {
+        font-size: 14px; /* Slightly smaller font size on smaller screens */
+    }
+}
+
+@media (min-width: 1350px) {
+    .messageContainer {
+        max-width: 1500px;
+        grid-template-columns: 1fr 1fr; /* Stack the columns on smaller screens */
+    }
+    body {
+        font-size: 18px; /* Slightly larger font size on larger screens */
+    }
+}
